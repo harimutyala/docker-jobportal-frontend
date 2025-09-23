@@ -4,11 +4,12 @@ import './index.css'
 import App from './App'
 import DashBoard from './DashBoard'
 
+// Add basename to match your WAR context
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-  <Routes>
-    <Route path='/' element={<App/>} />
-    <Route path='/dashboard' element={<DashBoard/>} />
-  </Routes>
+  <BrowserRouter basename="/frontapp1">
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='/dashboard' element={<DashBoard />} />
+    </Routes>
   </BrowserRouter>,
 )
